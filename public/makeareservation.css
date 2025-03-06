@@ -1,0 +1,119 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.top-bar {
+    width: 100%;
+    height: 100px;
+    background-color: #FECDCF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 100px;
+}
+
+.nav-link {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: #9D613F;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF80B3;
+}
+
+/* Reservation Section */
+.reservation-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/bg2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.reservation-form h2 {
+    font-size: 32px;
+    font-family: 'Dancing Script', cursive;
+    color: #9D613F;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 18px;
+    color: #9D613F;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #9D613F;
+}
+
+.reserve-btn {
+    padding: 15px 30px;
+    background-color: #E38497;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background-color: #FF80B3;
+}
+
+/* เปลี่ยนสีฟอนต์ของ label และข้อความ */
+.reservation-form label, .reservation-form input, .reservation-form select {
+    color: #FF80B3; /* สีชมพู */
+}
+
+/* เปลี่ยนสีฟอนต์ในปุ่ม */
+.reserve-btn {
+    color: #9D613F; /* เปลี่ยนฟอนต์ปุ่มให้เป็นสีเข้ม */
+}
+
+.reserve-btn:hover {
+    background-color: #FF80B3; /* สีชมพูเข้ม */
+    color: #FFFFFF; /* เปลี่ยนข้อความปุ่มให้เป็นสีขาวเมื่อ hover */
+}

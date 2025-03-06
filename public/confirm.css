@@ -18,7 +18,7 @@
 }
 
 .top-bar-logo {
-    width: 120px;
+    width: 100px;
     height: 100px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .nav-link {
-    font-size: 20px;
+    font-size: 40px;
     font-family: 'Dancing Script', cursive;
     color: #9D613F;
     font-weight: 700;
@@ -54,19 +54,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 80px 0;
 }
 
 .reservation-details {
     background-color: white;
-    padding: 30px;
+    padding: 60px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
     position: relative;
-    overflow: hidden;
 }
 
 .background-image {
@@ -85,15 +84,17 @@ body {
 }
 
 .reservation-details h1 {
-    font-size: 40px;
-    color: #9D613F;
-    margin-top: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #302621;
+    margin-top: 30px;
 }
 
 .reservation-details h2 {
+    font-family: 'Dancing Script', cursive;
     font-size: 24px;
-    color: #9D613F;
-    margin-bottom: 30px;
+    color: #302621;
+    margin-bottom: 40px;
 }
 
 .details p {
@@ -101,13 +102,11 @@ body {
     margin-bottom: 10px;
 }
 
-/* Details Box */
 .details-box {
     background-color: #ffe0ec;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin: 30px 0;
-    text-align: left;
+    margin: 20px 0;
 }
 
 .details-item {
@@ -124,7 +123,7 @@ body {
 
 /* Buttons */
 .button-container {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
 }
@@ -144,5 +143,5 @@ body {
 }
 
 .button:hover {
-    background-color: #9D613F;
+    background-color: #463a33;
 }

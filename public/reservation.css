@@ -1,0 +1,98 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.top-bar {
+    width: 100%;
+    height: 100px;
+    background-color: #FECDCF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top-bar-title {
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+    color: #9D613F;
+    font-weight: 700;
+}
+
+.top-nav {
+    display: flex;
+    gap: 100px; /* เพิ่มระยะห่างระหว่างแต่ละเมนู 100px */
+}
+
+.nav-link {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: #9D613F;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF80B3; /* Changing color on hover */
+}
+
+/* Reservation Section */
+.reservation-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/restaurantbg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation-content {
+    text-align: center;
+    color: white;
+}
+
+.reservation-content h1 {
+    font-size: 64px;
+    font-family: 'Dancing Script', cursive;
+    color: #422d20;
+    font-weight: 700;
+}
+
+.reservation-content p {
+    font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+    color: #312720;
+    margin-top: 20px;
+}
+
+.reservation-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 30px;
+    color: #5F5147;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-radius: 45px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(0deg, #E38497 1%, #FECDCF 100%);
+}
+
+.reservation-btn:hover {
+    background-color: #E38497;
+    color: #FFFFFF;
+}

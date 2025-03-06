@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/confirm.css">
+    <title>Reservation Confirmation</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="top-bar">
+        <img src="/img/logo.png" alt="logo" class="top-bar-logo">
+        <div class="top-nav">
+            <a href="/view-reservation" class="nav-link">View Reservation</a>
+        </div>
+    </div>
+
+    <!-- Reservation Details -->
+    <section class="reservation">
+        <div class="reservation-details">
+            <img src="/img/bg3.png" alt="Background Image" class="background-image">
+            <div class="reservation-text">
+                <h1>Bean & Bloom</h1>
+                <h2>Success Booking!</h2>
+            </div>
+
+            <div class="details">
+                <p><strong>Your reservation details</strong></p>
+
+                <!-- Reservation Information -->
+                <div class="details-box">
+                    <div class="details-item">
+                        <img src="/img/user.png" alt="Guests" class="icon">
+                        <p><strong>Name:</strong> <%= name %></p>
+                    </div>
+                    <div class="details-item">
+                        <img src="/img/mail.png" alt="Email" class="icon">
+                        <p><strong>Email:</strong> <%= email %></p>
+                    </div>
+                    <div class="details-item">
+                        <img src="/img/user2.png" alt="Guests" class="icon">
+                        <p><strong><%= people %> GUESTS</strong></p>
+                    </div>
+                    <div class="details-item">
+                        <img src="/img/time.png" alt="Time" class="icon">
+                        <p><strong><%= time %></strong></p>
+                    </div>
+                    <div class="details-item">
+                        <img src="/img/table.png" alt="Table" class="icon">
+                        <p><strong><%= tableType %></strong></p>
+                    </div>
+                    <div class="details-item">
+                        <img src="/img/day.png" alt="Day" class="icon">
+                        <p><strong><%= date %></strong></p>
+                    </div>
+                </div>
+
+                <!-- Buttons to Edit or Done -->
+                <div class="button-container">
+                    <a href="/edit-reservation/<%= _id %>" class="button">Edit Details</a>
+                    <a href="/home" class="button">Done</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
