@@ -125,6 +125,7 @@ app.post('/update-reservation/:id', async (req, res) => {
     const { name, email, date, time, people, tableType } = req.body;
 
     try {
+        // ค้นหาการจองที่ต้องการอัปเดต
         const updatedReservation = await Reservation.findByIdAndUpdate(
             reservationId,
             {
@@ -135,24 +136,64 @@ app.post('/update-reservation/:id', async (req, res) => {
                 people,
                 tableType
             },
-            { new: true }
+            { new: true } // Return the updated document
         );
 
+        // ตรวจสอบว่าอัปเดตสำเร็จหรือไม่
         if (!updatedReservation) {
             return res.status(404).send('Reservation not found');
         }
 
-        // หลังจากอัปเดตแล้วให้กลับไปที่หน้า /api/reservations
-        res.redirect('/api/reservations');
+        // ส่งข้อมูลไปที่หน้า confirm พร้อมแสดงผลการอัปเดต
+        res.render('confirm', {
+            name: updatedReservation.name,
+            email: updatedReservation.email,
+            date: updatedReservation.date,
+            time: updatedReservation.time,
+            people: updatedReservation.people,
+            tableType: updatedReservation.tableType,
+            _id: updatedReservation._id
+        });
+
     } catch (err) {
         console.error(err);
         res.status(500).send('Server Error');
     }
 });
 
-const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true })); // ใช้สำหรับรับข้อมูลจากฟอร์ม
 
+
+app.get('/delete-reservation/:id', async (req, res) => {
+    const { id } = req.params;  // ดึง id จาก URL
+    
+    try {
+        // ลบการจองที่ตรงกับ id
+        await Reservation.findByIdAndDelete(id);
+        
+        // หลังจากลบการจองแล้วให้กลับไปที่หน้า view-reservation
+        res.redirect('/view-reservation');
+    } catch (err) {
+        console.error("Error deleting reservation:", err);
+        res.status(500).send('Server Error');
+    }
+});
+
+// ใช้ POST สำหรับการลบการจอง
+app.post('/delete-reservation/:id', async (req, res) => {
+    const { id } = req.params;  // ดึง id จาก URL
+     
+    try {
+        // ลบการจองที่ตรงกับ id
+        await Reservation.findByIdAndDelete(id);
+        
+        // หลังจากลบการจองแล้วให้กลับไปที่หน้า view-reservation
+        res.redirect('/view-reservation');
+    } catch (err) {
+        console.error("Error deleting reservation:", err);
+        res.status(500).send('Server Error');
+    }
+});
 
 
 // MongoDB connection

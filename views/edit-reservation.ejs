@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/edit-reservation.css">
     <title>Edit Reservation</title>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Header -->
     <div class="top-bar">
         <img src="/img/logo.png" alt="logo" class="top-bar-logo">
         <div class="top-nav">
@@ -18,41 +18,42 @@
     </div>
 
     <!-- Edit Reservation Form -->
-    <div class="reservation-section">
-        <div class="reservation-details">
+    <section class="reservation-section">
+        <div class="container">
             <h1>Edit Reservation</h1>
             <form action="/update-reservation/<%= reservation._id %>" method="POST">
-                <div>
+                <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" value="<%= reservation.name %>" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" value="<%= reservation.email %>" required>
                 </div>
-                <div>
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" value="<%= reservation.date %>" required>
-                </div>
-                <div>
-                    <label for="time">Time</label>
-                    <input type="time" id="time" name="time" value="<%= reservation.time %>" required>
-                </div>
-                <div>
+                <div class="form-group">
                     <label for="people">Guests</label>
                     <input type="number" id="people" name="people" value="<%= reservation.people %>" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="tableType">Table Type</label>
                     <select id="tableType" name="tableType" required>
-                        <option value="premium" <%= reservation.tableType === 'premium' ? 'selected' : '' %>>Premium</option>
                         <option value="regular" <%= reservation.tableType === 'regular' ? 'selected' : '' %>>Regular</option>
-                        <option value="sofa" <%= reservation.tableType === 'sofa' ? 'selected' : '' %>>Sofa</option>
+                        <option value="premium" <%= reservation.tableType === 'premium' ? 'selected' : '' %>>Premium</option>
                     </select>
                 </div>
-                <button type="submit" class="btn">Update Reservation</button>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" value="<%= reservation.date %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" value="<%= reservation.time %>" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button">Update Reservation</button>
+                </div>
             </form>
         </div>
-    </div>
+    </section>
 </body>
 </html>

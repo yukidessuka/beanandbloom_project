@@ -6,44 +6,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/viewreservation.css">
-    <title>Your Reservations</title>
+    <title>View Reservations</title>
 </head>
 <body>
+    <!-- Navbar -->
     <div class="top-bar">
         <img src="/img/logo.png" alt="logo" class="top-bar-logo">
         <div class="top-nav">
             <a href="/home" class="nav-link">Home</a>
-            <a href="/logout" class="nav-link">Logout</a>
+            <a href="/view-reservation" class="nav-link">View Reservation</a>
         </div>
     </div>
 
-    <h2>Your Reservations</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Table Type</th>
-                <th>People</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% reservations.forEach((reservation) => { %>
-                <tr>
-                    <td><%= reservation.name %></td>
-                    <td><%= reservation.date %></td>
-                    <td><%= reservation.time %></td>
-                    <td><%= reservation.tableType %></td>
-                    <td><%= reservation.people %></td>
-                    <td>
-                        <a href="/edit-reservation/<%= reservation._id %>">Edit</a> |
-                        <a href="/delete-reservation/<%= reservation._id %>">Delete</a>
-                    </td>
-                </tr>
-            <% }); %>
-        </tbody>
-    </table>
+    <!-- Reservation Table Section -->
+    <section class="reservation-section">
+        <div class="container">
+            <h1>Your Reservations</h1>
+
+            <table class="reservation-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Guests</th>
+                        <th>Table Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% reservations.forEach(reservation => { %>
+                    <tr>
+                        <td><%= reservation.name %></td>
+                        <td><%= reservation.email %></td>
+                        <td><%= reservation.people %></td>
+                        <td><%= reservation.tableType %></td>
+                        <td><%= reservation.date %></td>
+                        <td><%= reservation.time %></td>
+                        <td>
+                            <form action="/delete-reservation/<%= reservation._id %>" method="POST" style="display: inline;">
+                                <button type="submit" class="button delete-button">Delete</button>
+                            </form>
+                            <a href="/edit-reservation/<%= reservation._id %>" class="button">Edit</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </body>
 </html>
