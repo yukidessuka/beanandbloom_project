@@ -1,0 +1,243 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/bg.png');  /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top bar with logo */
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #FF80B3;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.top-bar .logo {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #FF80B3;
+    outline: none;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #FF80B3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #FF80B3;
+}
+
+/* "Create an account" section */
+.create-account {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.create-account span {
+    font-size: 14px;
+    color: #666;
+}
+
+.create-account a {
+    color: #FF80B3;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/bg.png');  /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top bar with logo */
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #FF80B3;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.top-bar .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #FF80B3;
+    outline: none;
+}
+
+/* Sign Up button */
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #FF80B3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #FF80B3;
+}
+
+/* "Already have an account" section */
+.already-account {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.already-account span {
+    font-size: 14px;
+    color: #666;
+}
+
+.already-account a {
+    color: #FF80B3;
+    text-decoration: none;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+}

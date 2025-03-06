@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Top Bar with logo -->
+        <div class="top-bar">
+            <img src="/img/logo.png" alt="logo" class="logo">
+            <h1>Login</h1>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form action="/api/users/login" method="POST">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="create-account">
+                <span>Don't have an account?</span>
+                <a href="/signup">Create an account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
